@@ -11,7 +11,7 @@
       /* Write all necessery css here  */
 
       #nav{
-            border: 2px solid red;
+            
             display: flex;
             justify-content: space-between;
             width: 100%;
@@ -21,7 +21,7 @@
            
         }
         #nav>:nth-child(1){
-            border: 1px solid black;
+            
             width: 700px;
             align-items: center;
             
@@ -30,7 +30,7 @@
         
         
         .st{
-            border: 2px sold rgb(30, 201, 70);
+            
             display: flex;
           
           
@@ -58,7 +58,7 @@
         }
         
         .nd{
-        border: 2px solid rgb(175, 15, 15);
+       
         width: 300px;
         display: flex;
         justify-content: space-evenly;
@@ -95,6 +95,50 @@
             border-radius: 10px;
 
         }
+        #bottoms{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #202124;
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+#bottoms>div{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 50px;
+    
+}
+#bottoms>div>a{
+   text-decoration: none;
+   color: white;
+}
+#signup{
+
+    height: 500px;
+   width: 500px;
+   display: grid;
+   grid-template-columns: repeat(1,1fr);
+   margin: auto;
+   padding-bottom: 100px;
+}
+#signup>h1{
+color: red;
+text-align: center;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+#signup>form{
+
+
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 10px;
+}
+#signup>form>option{
+
+height: 10px;
+
+}
   </style>
 </head>
 
@@ -118,7 +162,7 @@
         <div id="qaz">
             
             <h3> Start an Order for Pickup or Devlivery</h3>
-            <button>Start Order</button>
+           
             
 
            
@@ -133,6 +177,19 @@
       <input type="submit" value="Submit" />
     </form>
   </div>
+  <div id="bottoms">
+    <img src="./logo2.png" alt="">
+    <div>
+     <a href="./menu.html">Menu</a>
+     <a href="./sign.html">Sign In</a>
+     <a href="./signup.html">Sign Up</a>
+     <a href="./deals.html">Deals</a>
+     <a href="./ABoutus.html">About us</a>
+    </div>
+    <a href="https://play.google.com/store/games?utm_source=apac_med&utm_medium=hasem&utm_content=Oct0121&utm_campaign=Evergreen&pcampaignid=MKT-EDR-apac-in-1003227-med-hasem-py-Evergreen-Oct0121-Text_Search_BKWS-BKWS%7CONSEM_kwid_43700065205026385_creativeid_535350509687_device_c&gclid=Cj0KCQiAo-yfBhD_ARIsANr56g6-gMTRBjI1BNUxQQwzi1-N2Sq8KlRF9k9J_ZAIhZOYfNLFniBwXOgaApjXEALw_wcB&gclsrc=aw.ds"><img src="./google.png" alt=""></a>
+ 
+ </div>
+        
 </body>
 
 
@@ -150,7 +207,8 @@
   
   function user_form(e){
   e.preventDefault()
-  newwindow = window.open("","newwindow", "width=600,height= 400");
+  
+  location.href="sign.html"
    let obj={
     name:name.value,
     password:password.value,
@@ -168,7 +226,7 @@
   
   }
   
-    
+  
   
       
       

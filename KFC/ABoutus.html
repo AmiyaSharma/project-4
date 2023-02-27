@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
+    <title>Sign in Page</title>
     <style>
-        
+              
         #nav{
            
             display: flex;
@@ -19,7 +19,7 @@
            
         }
         #nav>:nth-child(1){
-            
+           
             width: 700px;
             align-items: center;
             
@@ -56,7 +56,7 @@
         }
         
         .nd{
-        
+       
         width: 300px;
         display: flex;
         justify-content: space-evenly;
@@ -93,17 +93,7 @@
             border-radius: 10px;
 
         }
-        #cart-container{
-
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-        }
-        #cart-container>div>button{
-color: #ea0d0d;
-margin: 10px 10px 10px 10px;
-border: none;
-}
-#bottoms{
+        #bottoms{
     display: flex;
     justify-content: space-evenly;
     background-color: #202124;
@@ -120,9 +110,27 @@ border: none;
    text-decoration: none;
    color: white;
 }
+#signin{
+  
+   display: grid;
+   grid-template-columns: repeat(1,1fr);
+   margin:  50px 50px 50px 50px;
+   
+}
+#signin>h1{
+   color: #ea0d0d;
+   text-align: center;
+   center;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#signin>form{
+   
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="nav">
         <div class="st">
             <a class="ab" href="./home2.html"><img src="./logo.png" alt=""></a>
@@ -144,12 +152,23 @@ border: none;
             <h3> Start an Order for Pickup or Devlivery</h3>
             
             
+
+           
         </div>
-        <h1 id="total">Your Total cart Price is:- <span id="cart-total">0</span></h1>
-        <div id="cart-container">
-          <!-- Here Append All the cart Products  -->
-        </div>
-        <div id="bottoms">
+   
+        <div id="signin">
+           <h1>PUBLIC CAUTION NOTICE – FRAUDULENT FRANCHISE OFFERS</h1>
+           <h3>THE KFC NAME, LOGOS, AND RELATED MARKS ARE TRADEMARKS OF KFC, INC. Please beware of the fake websites misusing the KFC brand-name to defraud and offer KFC franchise. KFC INC, or Yum Restaurants (India) Private Limited or its affiliates do NOT offer its franchisee to general public at large in this manner.
+
+            It has come to our notice that some fraudulent and unscrupulous agencies/individuals are fraudulently offering false business/franchise opportunities of KFC, and have further floated fraudulent websites for example, www.kfcfranchisechayan.in or www.kfcpartner.com or www.yumbrandsfranchise.com (indicative list), etc., or several other unauthorized websites which fraudulently misuse the KFC name, address, logo or trademarks, and unauthorized emails IDs for example info@kfcfranchisechayan.in; or franchise@kfcpartner.com, or help@yumbrandsfranchise.com, (indicative list) etc., or multiple other unauthorized email IDs by misusing the name, logo, trademarks and address of KFC. These bogus agencies/persons are cheating people at large by falsely offering franchise opportunities with KFC India through the aforesaid websites, telephonic calls or emails and collecting money from people under the false pretext of offering franchise opportunities.
+            
+            We hereby highly caution the general public at large that the aforementioned website or any such other website as well as above email IDs or such other email IDs (except our official website) are strictly unauthorized and are fraudulent websites/email IDs. We do not have any association with such fraudulent websites, email IDs or phone numbers. General public is hereby advised not to fall prey to such fraudulent activities or solicitation through such websites or through emails/phone calls from unknown person. Yum Restaurants (India) Private Limited or its affiliates are neither directly nor through any agency/person on their behalf offering franchise opportunities to the public in this manner. If you are approached by such fraudsters offering a KFC franchise opportunity, then please report to us at grievanceofficer@kfcindia.co.in.
+            
+            Yum Restaurants (India) Private Limited or its affiliates bear NO responsibility whatsoever of any kind for any amount paid to any fraudulent individual or organizations falsely purporting to be representatives of KFC or Yum! Brands.
+            
+            </h3>
+          </div>
+          <div id="bottoms">
             <img src="./logo2.png" alt="">
             <div>
              <a href="./menu.html">Menu</a>
@@ -162,78 +181,31 @@ border: none;
          
          </div>
                 
-      </body>
+        </body>
+        
+      </html>
       <script>
-        // Write all necessery JS here 
-        let cart = JSON.parse(localStorage.getItem("cart"))||[]
-    
-        let container= document.getElementById("cart-container")
-    
-        function DisplayData(){
-          container.innerHTML=""
-    
-          cart.forEach((product) => {
-    
-            let Card = document.createElement("div");
-        let Image = document.createElement("img");
-        let name = document.createElement("h2");
-       
-        let Price = document.createElement("h3");
-        let Detail = document.createElement("p");
-            let increase= document.createElement("button")
-            let dicrease= document.createElement("button")
-            let quantity= document.createElement("span")
-            let remove= document.createElement("button")
-            Image.src = product.image;
-        name.textContent = product.name;
-       
-        Price.textContent = `₹${product.price}`;
-        Detail.textContent = product.discription;
-            quantity.textContent=product.quantity;
-            remove.textContent="Remove"
-            increase.textContent="+"
-            dicrease.textContent="-"
-    
-            remove.addEventListener("click", ()=>{
-              cart=cart.filter((ele)=>{
-                return ele.id!==product.id
-              })
-    localStorage.setItem("cart", JSON.stringify(cart))
-    DisplayData()
-             
-            })
-            increase.addEventListener("click", ()=>{
-              product=product.quantity++
-              localStorage.setItem("cart", JSON.stringify(cart))
-              DisplayData()
-             
-            })
-            dicrease.addEventListener("click", ()=>{
-              product=product.quantity--
-              localStorage.setItem("cart", JSON.stringify(cart))
-              DisplayData()
-             
-            })
-            let sum=0 
-            for (let i=0;i<cart.length;i++){
-              sum+=cart[i].price*cart[i].quantity
-              
-            }
-            document.getElementById("cart-total").textContent=sum
-    
-            
-    
-            Card.append(Image, name, Price, Detail,increase, quantity, dicrease, remove)
-    container.append(Card)
-            
-          });
-    
-    
-          // console.log("display",data)
-    
-        }
-    
-        DisplayData()
-    
+     
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
       </script>
-    </html>
+      

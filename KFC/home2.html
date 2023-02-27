@@ -5,11 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+     <!-- Swiper CSS -->
+     <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+     <!-- CSS -->
+     <link rel="stylesheet" href="css/style.css">
+    <!--<script src="script.js" defer></script>-->
     <title>Document</title>
     <style>
 
         #nav{
-            border: 2px solid red;
+          
             display: flex;
             justify-content: space-between;
             width: 100%;
@@ -19,7 +27,7 @@
            
         }
         #nav>:nth-child(1){
-            border: 1px solid black;
+           
             width: 700px;
             align-items: center;
             
@@ -56,7 +64,7 @@
         }
         
         .nd{
-        border: 2px solid rgb(175, 15, 15);
+        
         width: 300px;
         display: flex;
         justify-content: space-evenly;
@@ -117,8 +125,151 @@
             padding-bottom: 20px;
          
         }
-       
         
+       
+  
+
+.wrapper {
+  display: flex;
+  /* max-width: 650px; */
+  width: 100%;
+  height: 400px;
+  background: #fff;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.wrapper i.button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 36px;
+  width: 36px;
+  background-color: #343f4f;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 36px;
+  color: #fff;
+  font-size: 15px;
+  transition: all 0.3s linear;
+  z-index: 100;
+  cursor: pointer;
+}
+i.button:active {
+  transform: scale(0.94) translateY(-50%);
+}
+i#prev {
+  left: 25px;
+}
+i#next {
+  right: 25px;
+}
+.image-container {
+  height: 450px;
+  /* max-width: 500px; */
+  width: 100%;
+  overflow: hidden;
+  margin-top: 50px;
+}
+.image-container .carousel {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  transition: all 0.4s ease;
+}
+.carousel img {
+  height: 100%;
+  width: 100%;
+  border-radius: 18px;
+  border: 10px solid #fff;
+  object-fit: cover;
+}
+#offers{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #202124;
+    padding: 90px 10px 90px 10px;
+}
+#offers>div{
+    /* border: 2px solid red; */
+    border-radius: 10px;
+    justify-content: space-evenly;
+    background-color: #f8f7f5;
+    
+
+    
+}
+#offers>div>img{
+   border-radius: 10px;
+}
+#offers>div>div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #f8f7f5;
+   
+}
+#offers>div>div>button{
+
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+    color: #343431 ;
+    border: 1px solid #343431;
+    margin-bottom: 15px;
+   
+}
+#offers>div>div>a{
+   
+    color: #343431 ;
+    
+   
+}
+#offers>div>div>a:hover{
+   
+    background-color: #e0e4ed;
+   
+  
+}
+#offers>div>div>button:hover{
+  
+   background-color: #202124;
+   color: white;
+}
+#bottoms{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #202124;
+    padding-bottom: 100px;
+}
+#bottoms>div{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    
+}
+#bottoms>div>a{
+   text-decoration: none;
+   color: white;
+}
+#bottoms{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #202124;
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+#bottoms>div{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 50px;
+    
+}
+#bottoms>div>a{
+   text-decoration: none;
+   color: white;
+}
             </style>
         </head>
         <body>
@@ -141,14 +292,35 @@
         <div id="qaz">
             
             <h3> Start an Order for Pickup or Devlivery</h3>
-            <button>Start Order</button>
+            
             
 
            
         </div>
+        <section class="wrapper">
+            <i class="fa-solid fa-arrow-left button" id="prev"></i>
+            <div class="image-container">
+              <div class="carousel">
+                <img src="./image1.png" alt="" />
+                <img src="./image2.png" alt="" />
+                <img src="./image1.png" alt="" />
+                <img src="./image2.png" alt="" />
+                <img src="./image1.png" alt="" />
+                <img src="./image2.png" alt="" />
+                <img src="./image1.png" alt="" />
+                <img src="./image2.png" alt="" />
+                <img src="./image1.png" alt="" />
+                <img src="./image2.png" alt="" />
+              
+                <!--<img src="images/image4.jpg" alt="" />-->
+              </div>
+              <i class="fa-solid fa-arrow-right button" id="next"></i>
+            </div>
+          </section>
        <div>
         <img src="" alt="">
         <h1>Welcome to KFC</h1>
+
        </div>
 
             <h1>browse Caategories</h1>
@@ -193,9 +365,110 @@
             
         </div>
             
+<div id="offers">
+  
+    <div>
+        <img src="./offer.png" alt="">
+       <div>
+        <a href="./deals.html">View Details</a>
+        <button>
+            Redeem
+
+        </button>
+       </div>
+
+    
+
+    </div>
+    <div>
+        <img src="./offer.png" alt="">
+        <div>
+            <a href="./deals.html">View Details</a>
+            <button>
+                Redeem
+    
+            </button>
+           </div>
+
+    
+
+    </div>
+    <div>
+        <img src="./offer.png" alt="">
+        <div>
+            <a href="./deals.html">View Details</a>
+            <button>
+                Redeem
+    
+            </button>
+           </div>
+
+    
+
+    </div>
+    
+</div>
+<div id="bottoms">
+   <img src="./logo2.png" alt="">
+   <div>
+    <a href="./menu.html">Menu</a>
+    <a href="./sign.html">Sign In</a>
+    <a href="./signup.html">Sign Up</a>
+    <a href="./deals.html">Deals</a>
+    <a href="./ABoutus.html">About us</a>
+   </div>
+   <a href="https://play.google.com/store/games?utm_source=apac_med&utm_medium=hasem&utm_content=Oct0121&utm_campaign=Evergreen&pcampaignid=MKT-EDR-apac-in-1003227-med-hasem-py-Evergreen-Oct0121-Text_Search_BKWS-BKWS%7CONSEM_kwid_43700065205026385_creativeid_535350509687_device_c&gclid=Cj0KCQiAo-yfBhD_ARIsANr56g6-gMTRBjI1BNUxQQwzi1-N2Sq8KlRF9k9J_ZAIhZOYfNLFniBwXOgaApjXEALw_wcB&gclsrc=aw.ds"><img src="./google.png" alt=""></a>
+
+</div>
 
        
         </body>
         </html>
 
-       
+       <script>
+
+        // Get the DOM elements for the image carousel
+const wrapper = document.querySelector(".wrapper"),
+  carousel = document.querySelector(".carousel"),
+  images = document.querySelectorAll("img"),
+  buttons = document.querySelectorAll(".button");
+
+let imageIndex = 1,
+  intervalId;
+
+// Define function to start automatic image slider
+const autoSlide = () => {
+  // Start the slideshow by calling slideImage() every 2 seconds
+  intervalId = setInterval(() => slideImage(++imageIndex), 9000);
+};
+// Call autoSlide function on page load
+autoSlide();
+
+// A function that updates the carousel display to show the specified image
+const slideImage = () => {
+  // Calculate the updated image index
+  imageIndex = imageIndex === images.length ? 0 : imageIndex < 0 ? images.length - 1 : imageIndex;
+  // Update the carousel display to show the specified image
+  carousel.style.transform = `translate(-${imageIndex * 100}%)`;
+};
+
+// A function that updates the carousel display to show the next or previous image
+const updateClick = (e) => {
+  // Stop the automatic slideshow
+  clearInterval(intervalId);
+  // Calculate the updated image index based on the button clicked
+  imageIndex += e.target.id === "next" ? 1 : -1;
+  slideImage(imageIndex);
+  // Restart the automatic slideshow
+  autoSlide();
+};
+
+// Add event listeners to the navigation buttons
+buttons.forEach((button) => button.addEventListener("click", updateClick));
+
+// Add mouseover event listener to wrapper element to stop auto sliding
+wrapper.addEventListener("mouseover", () => clearInterval(intervalId));
+// Add mouseleave event listener to wrapper element to start auto sliding again
+wrapper.addEventListener("mouseleave", autoSlide);
+
+       </script>
