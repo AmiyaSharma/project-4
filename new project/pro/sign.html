@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      body{
+  background-color: rgb(252, 248, 243);
+}
+        #ab{
+         
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            background: #f79d00;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #64f38c, #f79d00);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #64f38c, #f79d00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            align-items: center;
+            font-size: larger;
+        }
+        .a{
+    display: flex;
+justify-content: baseline;
+margin-left: 2%;
+
+
+}
+.a>a{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50px;
+    width: 200px;
+ 
+    
+  
+text-decoration: none;
+
+
+}
+.a>a>img{
+    width: 35px;
+    border-radius: 50%;
+}
+.a>a>p{
+    
+    
+    color: white;
+}
+.b{
+    display: flex;
+   justify-content: space-between;
+ 
+    width: 85%;
+    margin-right: 10px;
+    align-items: center;
+}
+.b>div>i{
+    margin-left: 100px;
+    color: white;
+}
+
+
+.b>div>a>img{
+    width: 35px;
+    border-radius: 50%;
+}
+.b>div>a{
+    text-decoration: none;
+    color:white;
+    margin-left: 20px;
+
+}
+#sec{
+   display: flex;
+   align-items: center;
+  
+
+}
+
+#sec>a{
+    color:white;
+  margin-left: 20px;
+}
+#signin{
+   height: 500px;
+   width: 500px;
+   display: grid;
+   grid-template-columns: repeat(1,1fr);
+   margin: auto;
+   padding-bottom: 100px;
+}
+#signin>h1{
+   color: #ea0d0d;
+   text-align: center;
+}
+#signin>form{
+   
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+
+    </style>
+</head>
+<body>
+  <!-- <div id="ab">
+
+    <div class="a"><a href="">
+        <img src="http://103.201.142.250/css/dist/img/home02.png" alt="">
+        <p>OBD-IVR</p>
+    </a></div>
+    <div class="b">
+        <div><a href=""><i class="fa fa-bars"></i></a>
+            <a href="">Home</a>
+            <a href="">Contect</a></div>
+        <div id="sec">
+
+            <a href=""><img src="http://103.201.142.250/css/dist/img/avatar5.png" alt="">
+               <a href="">Noida01</a>
+                <i class="fa-solid fa-maximize"></i>
+        </div>
+       
+        
+    </a>
+        
+    </div>
+  </div> -->
+  <div id="signin">
+    <h1 id="heading">Please Enter Your Details</h1>
+    <form>
+      <input placeholder="Email" type="email" id="email" />
+      <input placeholder="Password" type="password" id="password" />
+      <button type="submit" value="Submit">Submit</button>
+      
+    </form>
+  </div>
+
+
+  
+  
+</body>
+</html>
+
+<script>
+    let user_data = JSON.parse(localStorage.getItem("account-data"))
+    
+    let emailel= document.getElementById("email")
+    let password= document.getElementById("password")
+    let formdata=document.querySelector("form")
+    let heading=document.getElementById("heading")
+    
+    formdata.addEventListener("submit", varification)
+    
+    function varification(e){
+      e.preventDefault()
+      user_data.forEach((element)=> {
+         
+    
+        if(emailel.value==element.email && password.value==element.password){
+          location.href="newhome.html"
+          heading.innerText="Sign in Successful"
+        } else {
+         
+          // alert("Wrong Credentials")
+          heading.innerText="Sign in Unsuccessful"
+        }
+        
+      });
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    </script>

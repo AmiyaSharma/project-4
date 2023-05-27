@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      *{text-decoration: none;
+        margin: 0;
+padding: 0;
+left: 0;
+}
+        #ab{
+         
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            background: #f79d00;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #64f38c, #f79d00);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #64f38c, #f79d00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            align-items: center;
+            font-size: larger;
+        }
+        .a{
+    display: flex;
+justify-content: baseline;
+margin-left: 2%;
+
+
+}
+.a>a{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50px;
+    width: 200px;
+ 
+    
+  
+text-decoration: none;
+
+
+}
+.a>a>img{
+    width: 35px;
+    border-radius: 50%;
+}
+.a>a>p{
+    
+    
+    color: white;
+}
+.b{
+    display: flex;
+   justify-content: space-between;
+ 
+    width: 85%;
+    margin-right: 10px;
+    align-items: center;
+}
+.b>div>i{
+    margin-left: 100px;
+    color: white;
+}
+
+
+.b>div>a>img{
+    width: 35px;
+    border-radius: 50%;
+}
+.b>div>a{
+    text-decoration: none;
+    color:white;
+    margin-left: 20px;
+
+}
+#sec{
+   display: flex;
+   align-items: center;
+  
+
+}
+
+#sec>a{
+    color:white;
+  margin-left: 20px;
+}
+/* #myLinks{
+    
+  display: none;
+  position: fixed;
+  left: 85px;
+  top: 69px;
+  
+  
+}
+
+#myLinks>a{
+    text-decoration: none;
+    
+  }
+  #myLinks>a>div{
+    
+    width: 250%;
+ height: 40px;
+
+    background-color: black;
+    text-align: center;
+    color: white;
+    float: left;
+  } */
+#myLinks{
+  display: none;
+  
+margin-top: 40px;
+list-style: none;
+position: fixed;
+transition: all .1s ease;
+width: 250px;
+height: 100%;
+background: #f79d00;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #64f38c, #f79d00);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #64f38c, #f79d00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+
+
+}
+
+#profile{
+  align-items: center;
+
+
+  height: 80px;
+   
+   text-align: center;
+   margin-bottom: 10px;
+    
+    }
+    #profile:hover{
+      background-color: rgb(121, 115, 115);
+    
+    }
+#profile>a>img{
+ margin-top: 10px;
+  width: 35px;
+    border-radius: 50%;
+}
+#profile>a{
+
+ color:white
+}
+#myLinks>a>div{
+ padding-top: 15px;
+ 
+height: 40px;
+  text-align: center;
+  position:static;
+
+}
+#myLinks>a>div:hover{
+
+  background-color: rgb(121, 115, 115);
+}
+#myLinks>a>div>p{
+
+ 
+
+color: white
+
+}
+body{
+  background-color: rgb(252, 248, 243);
+}
+
+    </style>
+</head>
+<body>
+  <div id="ab">
+
+    <div class="a"><a href="">
+        <img src="http://103.201.142.250/css/dist/img/home02.png" alt="">
+        <p>OBD-IVR</p>
+    </a></div>
+    <div class="b">
+        <div id="nav">
+            <div id="myLinks">
+              <div id="profile"> <a href=""><img src="http://103.201.142.250/css/dist/img/avatar5.png" alt="">
+                <a href="./signup.html"><p>Noida01</p></a></div>
+                <a href="./campaign.html"><div><p>Campaign</p></div></a>
+                <a href="./report.html"><div><p>Report</p></div></a>
+                <a href="./upload.html"><div><p>Upload</p></div></a>
+              </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()" id="icin"><i class="fa fa-bars"></i>
+        </a>
+            <a href="">Home</a>
+            <a href="">Contect</a></div>
+        <div id="sec">
+
+            <a href=""><img src="http://103.201.142.250/css/dist/img/avatar5.png" alt="">
+               <a href="./signup.html">Noida01</a>
+                <i class="fa-solid fa-maximize"></i>
+        </div>
+       
+        
+    </a>
+        
+    </div>
+  </div>
+ 
+  
+  
+</body>
+</html>
+
+<script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    </script>

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      *{text-decoration: none;
+        margin: 0;
+padding: 0;
+left: 0;
+}
+        #ab{
+         
+            height: 60px;
+            display: flex;
+            /* width: 100%; */
+            justify-content: space-between;
+            background: #f79d00;
+            background: #aa4b6b;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+            align-items: center;
+            font-size: larger;
+        }
+        .a{
+    display: flex;
+justify-content: baseline;
+margin-left: 2%;
+
+
+}
+.a>a{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50px;
+    width: 200px;
+ 
+    
+  
+text-decoration: none;
+
+
+}
+.a>a>img{
+    width: 35px;
+    border-radius: 50%;
+}
+.a>a>p{
+    
+    
+    color: white;
+}
+.b{
+    display: flex;
+   justify-content: space-between;
+ 
+    width: 85%;
+    margin-right: 10px;
+    align-items: center;
+}
+.b>div>i{
+    margin-left: 100px;
+    color: white;
+}
+
+
+.b>div>a>img{
+    width: 35px;
+    border-radius: 50%;
+}
+.b>div>a{
+    text-decoration: none;
+    color:white;
+    margin-left: 20px;
+
+}
+#sec{
+   display: flex;
+   align-items: center;
+  
+
+}
+
+#sec>a{
+    color:white;
+  margin-left: 20px;
+}
+/* #myLinks{
+    
+  display: none;
+  position: fixed;
+  left: 85px;
+  top: 69px;
+  
+  
+}
+
+#myLinks>a{
+    text-decoration: none;
+    
+  }
+  #myLinks>a>div{
+    
+    width: 250%;
+ height: 40px;
+
+    background-color: black;
+    text-align: center;
+    color: white;
+    float: left;
+  } */
+#myLinks{
+  display: none;
+  
+margin-top: 40px;
+list-style: none;
+position: fixed;
+transition: all .1s ease;
+width: 250px;
+height: 100%;
+background: #aa4b6b;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+
+
+
+}
+
+#profile{
+  align-items: center;
+
+
+  height: 80px;
+   
+   text-align: center;
+   margin-bottom: 10px;
+    
+    }
+    #profile:hover{
+      background-color: rgb(130, 12, 12);
+    
+    }
+#profile>a>img{
+ margin-top: 10px;
+  width: 35px;
+    border-radius: 50%;
+}
+#profile>a{
+
+ color:white
+}
+#myLinks>a>div{
+ padding-top: 15px;
+ 
+height: 40px;
+  text-align: center;
+  position:static;
+
+}
+#myLinks>a>div:hover{
+
+  background-color: rgb(157, 23, 23);
+}
+#myLinks>a>div>p{
+
+ 
+
+color: white
+
+}
+body{
+  background-color: rgb(244, 240, 239);
+}
+#cam{
+  height: 600px;
+
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  
+  
+}
+
+#data{
+  
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  height:98% ;
+  width: 150%;
+  padding-left: 15px ;
+  padding-top: 2px;
+  border-radius: 5px;
+}
+#data>input{
+margin: auto;
+  width:90%;
+  height: 20px;
+  border-radius: 5px;
+
+}
+#campaign_mode{
+  margin: auto;
+  width:92%;
+  
+  height: 20px;
+  border-radius: 5px;
+}
+#SMS{
+  margin: auto;
+  width:92%; 
+  height: 20px;
+  border-radius: 5px;
+}
+#data>p{
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+#data>button{
+  margin-top: 50px;
+  height: 6%;
+
+  width: 94%;
+  border-radius: 10px;
+  color: black;
+  background-color: antiquewhite;
+  font-size: larger;
+
+}
+#table{
+
+
+  width: 80%;
+  
+  margin-top: 0;
+  margin-left: 18%;
+
+}
+
+.tav>th{
+
+  border: 1px solid black;
+  background-color: rgb(52, 195, 147);
+  
+ 
+}
+.add{
+  
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:350%;
+
+}
+#bottom{
+  margin-top: 90px;
+
+  
+  background-color: rgb(34, 148, 34);
+  height: 30px;
+  
+}
+#bottom>p{
+ text-align: center;
+}
+#append{
+ 
+  width: 1000px;
+}
+#tbody{
+  
+  
+  width: 176%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.663);
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#tbody>tr>button{
+  color: black;
+border: none;
+  background-color: rgb(222, 145, 12);
+  width: 100px;
+  height: 20px;
+
+}
+
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+  .b{
+    display: none;
+  }
+  #cam{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+  #formid{
+  
+    
+    width: 25%;
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 4%;
+    height: 95%;
+  }
+  #data{
+    width: 145%;
+    margin-left: 100px;
+  }
+  #ab{
+   width: 150%;
+    border: 2px solid red;
+    margin: auto;
+    
+  }
+  .tav{
+
+
+width: 5px;
+
+}
+
+  .tav>th{
+
+width: 5px; 
+
+
+}
+  #append{
+width: 700px;
+
+ 
+ padding-left: 50px;
+  }
+  #table{
+    margin-top: 30px;
+    margin-left: 100px;
+width: 110%;
+padding-left: 20px;
+
+
+
+}
+  #bottom{
+ 
+    width: 150%;
+  
+ margin-top: 150px;
+}
+.add{
+  text-align: center;
+  margin-left: 50%;
+}
+}
+
+    </style>
+</head>
+<body>
+  <div id="ab">
+
+    <div class="a"><a href="">
+        <img src="http://103.201.142.250/css/dist/img/home02.png" alt="">
+        <p>OBD-IVR</p>
+    </a></div>
+    <div class="b">
+        <div id="nav">
+            <div id="myLinks">
+              <div id="profile"> <a href=""><img src="http://103.201.142.250/css/dist/img/avatar5.png" alt="">
+                <a href="./signup.html"><p>Noida01</p></a></div>
+                <a href="./campaign.html"><div><p>Campaign</p></div></a>
+                <a href="./report.html"><div><p>Report</p></div></a>
+                <a href="./upload.html"><div><p>Upload</p></div></a>
+              </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()" id="icin"><i class="fa fa-bars"></i>
+        </a>
+            <a href="">Home</a>
+            <a href="">Contect</a></div>
+        <div id="sec">
+
+            <a href=""><img src="http://103.201.142.250/css/dist/img/avatar5.png" alt="">
+               <a href="./signup.html">Noida01</a>
+                <i class="fa-solid fa-maximize"></i>
+        </div>
+       
+        
+    </a>
+        
+    </div>
+  </div>
+  <h1 class="add">Add Campaign</h1>
+
+<div id="cam">
+<div id="formid">
+  <form id="data">
+    <p>Campaign Name</p>
+    <input id="name1" type="text">
+    <p>Solution Type</p>
+   <select  id="campaign_mode" name="campaign_mode" class="discription" required>
+    <option class="discraaiption" value>--Select Type--</option>
+    <option value="ReminderOBD">Reminder OBD</option>
+    <option value="SimpleOBD">Simple OBD</option>
+  </select>
+  <p>SMS</p>
+  <select id="SMS" name="message" class="sms-control-sm" required>
+   <option class="type" value>--Select Type--</option>
+   <option value="yes">Yes</option>
+   <option value="No">No</option>
+ </select>
+ <p>MaxTry</p>
+    <input id="enddate" type="text">
+    <p>StartTime</p>
+    <input id="catagory" type="text">
+    <p>EndTime</p>
+    <input id="price" type="text">
+    <button id="submit">submit</button>
+  </form>
+
+</div>
+<div id="append">
+
+  <table id="table">
+    <thead>
+      <tr class="tav">
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>End Date</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Remove</th>
+      </tr>
+    </thead>
+    <tbody id="tbody">
+      <!-- Update the rows here using jsvascript -->
+    </tbody>
+  </table>
+
+
+</div>
+  
+</div>
+  <div id="bottom">
+<p>@copywrite</p>
+  </div>
+  
+</body>
+</html>
+
+<script src="./script.js"></script>

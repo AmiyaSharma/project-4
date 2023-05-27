@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #ab{
+         
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            background: #aa4b6b;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+            align-items: center;
+            font-size: larger;
+        }
+        .a{
+    display: flex;
+justify-content: baseline;
+margin-left: 2%;
+
+
+}
+.a>a{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50px;
+    width: 200px;
+ 
+    
+  
+text-decoration: none;
+
+
+}
+.a>a>img{
+    width: 35px;
+    border-radius: 50%;
+}
+.a>a>p{
+    
+    
+    color: white;
+}
+.b{
+    display: flex;
+   justify-content: space-between;
+ 
+    width: 85%;
+    margin-right: 10px;
+    align-items: center;
+}
+.b>div>i{
+    margin-left: 100px;
+    color: white;
+}
+
+
+.b>div>a>img{
+    width: 35px;
+    border-radius: 50%;
+}
+.b>div>a{
+    text-decoration: none;
+    color:white;
+    margin-left: 20px;
+
+}
+#sec{
+   display: flex;
+   align-items: center;
+  
+
+}
+
+body{
+  background-color: rgb(252, 248, 243);
+}
+#sec>a{
+    color:white;
+  margin-left: 20px;
+}
+#signup{
+
+height: 500px;
+width: 500px;
+display: grid;
+grid-template-columns: repeat(1,1fr);
+margin: auto;
+padding-bottom: 100px;
+}
+#signup>h1{
+color: red;
+text-align: center;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+#signup>form{
+
+
+display: grid;
+grid-template-columns: repeat(1,1fr);
+gap: 10px;
+}
+#signup>form>option{
+
+height: 10px;
+
+}
+
+    </style>
+</head>
+<body>
+  <div id="ab">
+
+    <div class="a"><a href="">
+        <img src="http://103.201.142.250/css/dist/img/home02.png" alt="">
+        <p>OBD-IVR</p>
+    </a></div>
+    <div class="b">
+        <div><a href=""><i class="fa fa-bars"></i></a>
+            <a href="">Home</a>
+            <a href="">Contect</a></div>
+        <div id="sec">
+
+            <a href=""><img src="http://103.201.142.250/css/dist/img/avatar5.png" alt="">
+               <a href="">Noida01</a>
+                <i class="fa-solid fa-maximize"></i>
+        </div>
+       
+        
+    </a>
+        
+    </div>
+  </div>
+  <div id="signup">
+    <h1>Please Enter Your Details</h1>
+    <form>
+      <input placeholder="Name" type="text" id="name">
+      <input placeholder="Email" type="email" id="email">
+      <input placeholder="Password" type="password"  id="password">
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
+  
+  
+</body>
+</html>
+<script>
+    let name = document.getElementById("name")
+       let password = document.getElementById("password")
+       let email= document.getElementById("email")
+     let formel= document.querySelector("form")
+     
+     formel.addEventListener("submit",user_form)
+     
+     let userdata = JSON.parse(localStorage.getItem("account-data"))||[];
+     
+     function user_form(e){
+     e.preventDefault()
+     
+     location.href="sign.html"
+      let obj={
+       name:name.value,
+       password:password.value,
+       email:email.value
+   
+      }
+   
+      userdata.push(obj)
+     
+     
+       
+     
+       localStorage.setItem("account-data",JSON.stringify(userdata))
+         
+     
+     }
+     
+     
+     
+         
+         
+     
+       
+     
+     
+     
+     </script>
+   
